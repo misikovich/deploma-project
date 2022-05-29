@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 :root {
     --main-color: #F07566;
-    --gray-bg: #d8d8d8; 
+    --gray-bg: #d8d8d8;
     --g-padding: 0 75px;
 }
 
-.container { 
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     background-color: #fff;
@@ -14,11 +17,13 @@
 
 
 /* HEADER */
-.header { 
+
+.header {
     width: 100%;
     height: 95px;
     border-bottom: 2px solid #e5e5e5;
 }
+
 .header-inner {
     height: 100%;
     margin: 0 51px;
@@ -26,19 +31,23 @@
     justify-content: flex-end;
     align-items: center;
 }
+
 .logo {
     background: transparent;
     outline: 3px solid transparent;
     outline-offset: -1px;
     transition: all 0.3s ease;
 }
+
 .logo:hover {
     transform: scale(0.9);
 }
+
 .logo:active {
     background: #46df27;
     outline: 7px solid #46df27;
 }
+
 .header-inner .nav {
     margin-right: auto;
     margin-left: 51px;
@@ -48,17 +57,20 @@
     display: flex;
     justify-content: space-between;
 }
+
 .nav li {
     padding: 10px;
     outline: 1px solid transparent;
     outline-offset: 3px;
     transition: all 0.3s ease;
 }
+
 .nav li:hover {
     outline-color: #000000;
     outline-offset: 0px;
 }
-.header-inner .nav li a { 
+
+.header-inner .nav li a {
     white-space: nowrap;
     text-decoration: none;
     color: #000000;
@@ -66,10 +78,12 @@
     font-size: 15px;
     line-height: 20px;
 }
+
 .btn-group {
     display: flex;
     justify-content: stretch;
 }
+
 .btn {
     text-decoration: none;
     color: #fff;
@@ -86,41 +100,69 @@
     transition: all 0.3s ease;
     box-shadow: inset 0px 0px 2em transparent;
 }
+
 .btn:hover {
     background: #ff633633;
     color: #303030;
 }
+
 .btn-outline {
     background: transparent;
-    outline: 1px solid #000000;
-    outline-offset: -1px;
     color: #000000;
 }
+
+.btn-outline,
+.btn-outline:active,
+.btn-outline:focus {
+    outline: 1px solid #00000080;
+    outline-offset: -1px;
+}
+
 .btn-outline:hover {
-    outline-color: #ffffff00;
+    outline-color: #00000000;
     color: #f1f1f1;
     background: rgb(143, 143, 143);
 }
+
 .btn:active {
     background: #46df27;
     box-shadow: inset 0px 0px 1em #ffffff88;
 }
+
+
 /* HEADER */
 
 
 /* MAIN */
+
 .main-container {
     padding: var(--g-padding);
 }
+
 .maxwidth-centered {
     width: 100%;
     max-width: 1290px;
     margin: 0 auto;
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 /* MAIN */
 
 
 /* ARTICLE 1 */
+
 #article-1 {
     margin-top: 97px;
     height: 628px;
@@ -131,36 +173,44 @@
     background-repeat: no-repeat;
     background-position: center right;
 }
-.article-title { 
+
+.article-title {
     font-weight: 600;
     font-size: 65px;
     line-height: 70px;
     display: block;
     width: 552px;
 }
-.article-description { 
+
+.article-description {
     display: block;
     margin-top: 51px;
     font-size: 25px;
     line-height: 35px;
     width: 471px;
 }
-#article-1 .btn-group { 
+
+#article-1 .btn-group {
     margin-top: 50px;
 }
+
 #article-1 .btn {
     width: 160px;
     line-height: 60px;
 }
-.undertext { 
+
+.undertext {
     margin-top: 25px;
     font-size: 15px;
     line-height: 25px;
 }
+
+
 /* ARTICLE 1 */
 
 
 /* ARTICLE 2 */
+
 .fullwidth-separator {
     display: flex;
     flex-direction: column;
@@ -168,11 +218,13 @@
     background: #FF9C7D;
     padding: 0 75px;
 }
+
 #article-2 {
     margin-top: 137px;
     height: 455px;
     max-height: 455px;
 }
+
 .fullwidth-separator .article-title {
     display: block;
     text-align: center;
@@ -180,19 +232,24 @@
     line-height: 60px;
     margin: 0 auto;
 }
+
 #article-2 .article-title {
     margin-top: 108px;
     width: 672px;
 }
+
 .logo-demo {
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
 }
+
+
 /* ARTICLE 2 */
 
 
 /* ARTICLE 3 */
+
 .card {
     display: flex;
     flex-direction: column;
@@ -202,21 +259,26 @@
     background-position: right center;
     margin-top: 250px;
 }
+
 .right-sided {
     background-position: left center;
 }
+
 .right-sided * {
     margin-left: calc(632px + 138px);
 }
+
 .card .article-title {
     font-size: 50px;
     line-height: 60px;
 }
+
 .card .article-description {
     margin-top: 30px;
     font-size: 20px;
     line-height: 30px;
 }
+
 .card .start-link {
     font-size: 20px;
     line-height: 30px;
@@ -229,70 +291,92 @@
     outline-offset: 10px;
     transition: all 0.3s ease;
 }
+
 .start-link:hover {
     outline-color: #00000088;
     outline-offset: 7px;
 }
+
 .first-card {
     margin-top: 90px;
 }
+
 #article-3 {
     background-image: url(../img/1.png);
 }
+
 #article-3 .article-title {
     width: 493px;
 }
+
+
 /* ARTICLE 3 */
 
 
 /* ARTICLE 4 */
+
 #article-4 {
     background-image: url(../img/2.png);
 }
+
 #article-4 .article-title {
     width: 379px;
 }
+
+
 /* ARTICLE 4 */
 
 
 /* ARTICLE 5 */
+
 #article-5 {
     background-image: url(../img/3.png);
 }
+
 #article-5 .article-title {
     width: 397px;
 }
+
+
 /* ARTICLE 5 */
 
 
 /* ARTICLE 6 */
+
 #article-6 {
     background-image: url(../img/4.png);
 }
+
 #article-6 .article-title {
     width: 348px;
 }
+
+
 /* ARTICLE 6 */
 
 
 /* ARTICLE 7 */
+
 #article-7 .article-title {
     margin-top: 120px;
     font-size: 50px;
     line-height: 60px;
     width: 890px;
 }
+
 #article-7 {
     background: #FFF8E4;
     height: 1033px;
     margin-top: 150px;
 }
+
 .card-container {
     margin-top: 58px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 57px;
 }
+
 .card-element {
     justify-self: center;
     flex-direction: column;
@@ -301,6 +385,7 @@
     width: 330px;
     height: 294px;
 }
+
 .card-icon {
     display: block;
     margin: 0 auto;
@@ -308,6 +393,7 @@
     height: 120px;
     margin-top: 21px;
 }
+
 .card-title {
     margin-top: 26px;
     font-weight: 600;
@@ -315,11 +401,13 @@
     line-height: 35px;
     text-align: center;
 }
-.card-description { 
+
+.card-description {
     margin-top: 20px;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
 }
-/* ARTICLE 7 */
 
+
+/* ARTICLE 7 */
