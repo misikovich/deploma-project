@@ -698,7 +698,7 @@ html {
     /* padding: 92px 75px 43px 75px; */
     padding-top: 92px;
     background: #eee;
-    width: 100vw;
+    width: 100%;
 }
 
 .footer-inner {
