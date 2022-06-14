@@ -41,3 +41,39 @@ $(document).ready(function() {
         } // End if
     });
 });
+
+$(window).on("load", function() {
+    var logo = document.getElementById("main-logo");
+    Promise.all(
+        logo.getAnimations().map(
+            function (animation) {
+                return animation.finished
+            }
+        )
+    ).then(
+        function () {
+            logo.classList.add("loaded");
+            $(".loader-wrapper").fadeOut("slow");
+        }
+    );
+});
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("show");
+    } else {
+        mybutton.classList.remove("show");
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
