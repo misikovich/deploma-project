@@ -29,7 +29,7 @@ html {
 
 .loader-wrapper {
     position: fixed;
-    z-index: 99;
+    z-index: 98;
     top: 0;
     left: 0;
     width: 100%;
@@ -101,6 +101,7 @@ html {
     transform: translateX(-50%);
     transform: scale(2);
     transition: all 0.9s ease;
+    z-index: 99;
     /* animation: onOpenAnimation 0.5s ease; */
     animation: onOpenAnimation 0.4s linear;
     animation-iteration-count: 1;
